@@ -1,20 +1,18 @@
-/*Привет ревьюер! я буду очень благодарна за максимально подробные комментарии к работе
-Зарнее спасибо и хорошего дня
-Сначала думала, что проект надо перенести в fist-project, поэтому пушила туда все изменения!*/
-
+/* Задаем параметры для всей страницы */
 
 .page {
-min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
-max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
-margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
-font-family: 'Helvetica Neue', Arial, sans-serif;
+  min-width: 1100px;
+/* мы ещё не умеем делать мобильную версию сайта, */
+/* поэтому выше установлена минимальная ширина страницы */
+  max-width: 1600px;
+/* выше установили ограничение по максимальной ширине */
+  margin: 0 auto;
+/* выше для экранов больше 1600px отцентрировали весь контент */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-  /* 1 страница*/
+/* 1 страница Начать учиться */
+
 .header {
   display: flex;
   min-height: 600px;
@@ -24,11 +22,13 @@ font-family: 'Helvetica Neue', Arial, sans-serif;
   align-items: center;
   position: relative;
 }
+
 .logo {
   height: 32px;
   width: 228px;
   z-index: 2;
 }
+
 .logo_place_header {
   background: url(../images/logo_place_header.svg) no-repeat;
   position: absolute;
@@ -37,6 +37,8 @@ font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .header__title {
+  margin-block: 0; /* не получилось обнулить через margin: 0, в пачке нашла вариант решения*/
+  margin-inline: 0;/* не получилось обнулить через margin: 0, в пачке нашла вариант решения*/
   margin-left: 64px;
   line-height: 96px;
   font-size: 102px;
@@ -51,8 +53,9 @@ font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
   font-weight: normal;
   position: absolute;
-  width: 388px;
-  margin: 0px;
+  max-width: 388px;
+  width: 100%;
+  margin: 0;
   left: 64px;
   bottom: 30px;
   z-index: 2;
@@ -67,8 +70,8 @@ font-family: 'Helvetica Neue', Arial, sans-serif;
   position: absolute;
   height: 608px;
   width: 765px;
-  bottom: 0px;
-  right: 0px;
+  bottom: 0;
+  right: 0;
   z-index: 1;
 }
 
@@ -81,130 +84,131 @@ font-family: 'Helvetica Neue', Arial, sans-serif;
   top: 64px;
 }
 
-/* 2 страница*/
+/* 2 страница Главные проблемы в учебе */
 
 .description {
   margin-top: 100px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
-.description__two-columns {
+.two-columns {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
   width: 80%;
-  min-width: 784px;
+  margin: 0 auto;
 }
 
-.description__two-columns_brief {
+.two-columns__brief {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
   color:#2f80ed;
   width: 175px;
-  margin-top: 0px;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
-.description__two-columns_main-text {
+.two-columns__main-text {
   min-width: 784px;
   width: 80%;
 }
 
-.description__two-columns_paragraph {
+.two-columns__paragraph {
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
   margin-top: 30px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
-.span_accent {
+.two-columns__span_accent {
   line-height: 34px;
   font-size: 24px;
   font-weight: 600;
 }
 
-.description__two-columns_paragraph:first-of-type {
-  margin-top: 0px;
+.two-columns__paragraph:first-of-type {
+  margin-top: 0;
 }
 
-/* 3 страница*/
+/* 3 страница Цыфры и факты */
 
 .digits {
   margin-top: 100px;
   margin-bottom: 100px;
 }
 
-.section_title {
+.section-title {
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
   text-align: center;
   width: 60%;
-  margin: 100px auto 0px auto;
+  margin: 100px auto 0 auto;
 }
 
-
-.section_subtitle {
+.section-subtitle {
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   width: 60%;
   text-align: center;
-  margin: 20px auto 0px auto;
+  margin: 20px auto 0 auto;
 }
 
 .table {
   display: flex;
   width: 1100px;
-  margin: 60px auto 0 auto;
+  margin: 0 auto;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.table_cell {
+.table__cell {
   width: 250px;
   margin-top: 60px;
 }
 
-.table_heading {
+.table__heading {
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.table_text {
+.table__text {
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
   margin-top: 20px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
-/* 4 страница*/
+/* 4 страница Метод Фейнна */
 
 .feynman {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
   position: relative;
-  height: 890px;
+  min-height: 890px;
   background: #f2f2f2 url(..//images/feynman.png) no-repeat bottom left;
   background-size: 867px 637px;
+  padding-top: 100px;
 }
 
-.feynman_title {
+.feynman__title {
   line-height: 1.15;
   font-size: 120px;
   font-weight: 600;
   width: 648px;
   text-align: center;
-  margin: 100px auto 0px auto;
+  margin: 0 auto;
+
 }
 
-.feynman_subtitle {
+.feynman__subtitle {
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
@@ -212,7 +216,7 @@ font-family: 'Helvetica Neue', Arial, sans-serif;
   text-align: center;
 }
 
-.feynman_subtitle_link {
+.feynman__link {
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
@@ -221,30 +225,28 @@ font-family: 'Helvetica Neue', Arial, sans-serif;
   top: 50%;
 }
 
-
-/* 5 страница*/
+/* 5 страница Принципы обучения от Кауфмана */
 
 .kaufman {
   background-color:  #1f1f1f;
-  margin-top: 0px;
+  margin-top: 0;
   padding-bottom: 90px;
   overflow: hidden;
   position: relative;
 }
 
-.kaufman__title_theme_dark {
+.section-title__theme_dark {
   color: #f2f2f2;
-  margin: 90px auto 0px auto;
+  margin: 90px auto 0 auto;
   position: relative;
   z-index: 1;
 }
 
-.kaufman__subtitle_theme_dark {
-color: #f2f2f2;
+.section-subtitle__theme_dark {
+  color: #f2f2f2;
 }
 
-/* и элемента с модификатором вида ключ-значение */
-.table_cell_theme_dark {
+.table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
@@ -252,19 +254,19 @@ color: #f2f2f2;
   z-index: 1;
 }
 
-.kaufman_illustration {
-background-image: url(../images/kaufman-triangle.svg);
-width: 877px;
-height: 877px;
-position: absolute;
-right: -210px;
-background-size: contain;
-top: 0;
-z-index: 0;
-overflow: hidden;
+.kaufman__triangle {
+  background-image: url(../images/kaufman-triangle.svg);
+  width: 877px;
+  height: 877px;
+  position: absolute;
+  right: -210px;
+  background-size: contain;
+  top: 0;
+  z-index: 0;
+  overflow: hidden;
 }
 
-/* Подвал*/
+/* Подвал Ссылки, автор */
 
 .footer {
   background-color: #1f1f1f;
@@ -272,48 +274,46 @@ overflow: hidden;
   min-height: 350px;
   padding-top: 60px;
   padding-bottom: 40px;
+  box-sizing: border-box;
 }
 
 .footer__columns {
-display: flex;
-width: 90%;
-justify-content: space-between;
-margin: 0px auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
 }
 
-.footer__columns_copyright {
-  position: relative;
+.footer__column_content_copyright{
   flex-basis: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.footer__place_logo {
+.footer__column_content_info {
+  align-items:flex-end;
+}
+
+.logo__place_footer{
   background: url(../images/logo_place_footer.svg) no-repeat;
 }
 
 .footer__author {
-margin-top: 18px;
-margin-bottom: 18px;
-line-height: 25px;
-font-size: 18px;
-font-weight: normal;
-position: absolute;
-bottom: 0;
-left: 0;
-}
-
-.footer__column_info {
-  display: flex;
-  flex-direction: column;
-  min-height: 350px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .footer__column-links {
   text-decoration: none;
   color: white;
   list-style-type: none;
-  padding-left: 0px;
-  padding-top: 0px;
-  margin-top: 0px;
+  padding-left: 0;
+  padding-top: 0;
+  margin-top: 0;
   margin-bottom: 16px;
 }
 
@@ -338,5 +338,5 @@ left: 0;
   width: 16px;
   height: 16px;
   margin-left: 10px;
-  margin-top: 0px;
+  margin-top: 0;
 }
