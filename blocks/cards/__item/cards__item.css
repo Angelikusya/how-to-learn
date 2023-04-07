@@ -1,0 +1,8 @@
+.cards__item {
+  width: 240px; /* В брифе нет, но в пачке подсказали */
+  margin-right: 100px;
+}
+
+.cards__item:nth-child(3n) {
+  margin-right: 0;
+}
